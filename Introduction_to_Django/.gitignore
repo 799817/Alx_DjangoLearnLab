@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Django database
+db.sqlite3
+
+# Django migrations
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__pycache__/
+EOF 
+
+EOF 
+
+cat > .gitignore <<'EOF'
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Django database
+db.sqlite3
+
+# Django migrations
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__pycache__/
