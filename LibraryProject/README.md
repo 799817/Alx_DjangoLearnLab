@@ -1,1 +1,2 @@
-This is the LibraryProject Django project for ALX Django Learn Lab.
+# LibraryProject
+A basic Django project to learn project structure, models, and apps.
