@@ -1,4 +1,5 @@
-```python
 from bookshelf.models import Book
-Book.objects.all()
-# Output: <QuerySet [<Book: 1984 by George Orwell (1949)>]>
+
+# Retrieve the book we created
+book = Book.objects.get(title="1984")  # or title="Nineteen Eighty-Four" if updated
+book
