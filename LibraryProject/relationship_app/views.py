@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.views.generic.detail import DetailView
 from .models import Book, Library
@@ -30,7 +30,7 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
+            login(request, user)  # Log the user in after registration
             messages.success(request, "Registration successful.")
             return redirect("list_books")
         else:
@@ -59,3 +59,4 @@ def logout_view(request):
     logout(request)
     messages.info(request, "You have been logged out.")
     return render(request, "relationship_app/logout.html")
+           
